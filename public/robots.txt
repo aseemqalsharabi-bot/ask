@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://asem5g.pages.dev/sitemap.xml

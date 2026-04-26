@@ -1,0 +1,21 @@
+{
+  "name": "متجر عاصم لتقنية الشبكات",
+  "short_name": "متجر عاصم",
+  "description": "قوة الاتصال التي تستحقها.. استقرار تام وسرعة بلا حدود",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0B",
+  "theme_color": "#00F2FF",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/vTddGz7n/1776031770147.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.postimg.cc/vTddGz7n/1776031770147.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
