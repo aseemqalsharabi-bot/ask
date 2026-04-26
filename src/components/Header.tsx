@@ -61,11 +61,11 @@ export default function Header() {
           {/* Center: Branding Unit (Logo + Name) */}
           <div className="flex items-center justify-center z-10">
             <Link to="/" className="flex items-center gap-3 group transition-all duration-300">
-              <div className="relative w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-full border border-white/10 group-hover:border-brand-accent/30 transition-all duration-500 shadow-xl flex items-center justify-center overflow-hidden shrink-0">
+              <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-brand-accent/30 group-hover:border-brand-accent transition-all duration-500 shadow-[0_0_15px_rgba(234,179,8,0.2)] flex items-center justify-center overflow-hidden shrink-0 bg-white shadow-brand-accent/20">
                 <OptimizedImage 
                   src={LOGO_URL} 
                   alt="متجر عاصم" 
-                  className="w-full h-full object-contain p-1.5 transition-transform duration-500 group-hover:scale-110" 
+                  className="w-full h-full object-cover rounded-full scale-105 transition-transform duration-500 group-hover:scale-110" 
                   highPriority={true}
                   widthParam={200}
                 />
@@ -108,7 +108,9 @@ export default function Header() {
             >
               <div className="flex justify-between items-start mb-8">
                 <div className="flex items-center gap-3">
-                  <OptimizedImage src={LOGO_URL} alt="Logo" className="h-12 w-auto" widthParam={200} />
+                  <div className="relative w-14 h-14 rounded-full border-2 border-brand-accent/30 shadow-[0_0_15px_rgba(234,179,8,0.2)] overflow-hidden shrink-0 bg-white shadow-brand-accent/20">
+                    <OptimizedImage src={LOGO_URL} alt="Logo" className="w-full h-full object-cover rounded-full scale-105" widthParam={200} />
+                  </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-black text-white tracking-tighter">متجر عاصم</span>
                     <span className="text-[8px] text-brand-accent font-black uppercase tracking-[0.1em]">لتقنية الشبكات</span>
