@@ -84,22 +84,22 @@ export default function Home() {
       {
         "@type": "SiteNavigationElement",
         "name": "الأنتينا الميمو",
-        "url": "https://asem5g.pages.dev/category/Antennas"
+        "url": "https://www.asemnet.com/category/Antennas"
       },
       {
         "@type": "SiteNavigationElement",
         "name": "قسم الراوترات",
-        "url": "https://asem5g.pages.dev/category/Routers"
+        "url": "https://www.asemnet.com/category/Routers"
       },
       {
         "@type": "SiteNavigationElement",
         "name": "مقويات الشبكة",
-        "url": "https://asem5g.pages.dev/category/Packages"
+        "url": "https://www.asemnet.com/category/Packages"
       },
       {
         "@type": "SiteNavigationElement",
         "name": "تعديل الراوترات",
-        "url": "https://asem5g.pages.dev/category/Services"
+        "url": "https://www.asemnet.com/category/Services"
       },
       {
         "@type": "SiteNavigationElement",
@@ -117,8 +117,8 @@ export default function Home() {
         <meta property="og:title" content="متجر عاصم لتقنية الشبكات" />
         <meta property="og:description" content="متخصصون في حلول مشاكل الشبكة وضعف الانترنت تركيب انتينا ميمو وتعديل راوترات 5G تاسيس وتركيب الشبكات باحدث التقنيات احصل على شبكة امنه ومستقرة" />
         <meta property="og:image" content="https://i.postimg.cc/q7FNJj0K/IMG-20260205-WA0041(1).png" />
-        <meta property="og:url" content="https://asem5g.pages.dev" />
-        <link rel="canonical" href="https://asem5g.pages.dev" />
+        <meta property="og:url" content="https://www.asemnet.com" />
+        <link rel="canonical" href="https://www.asemnet.com" />
         <script type="application/ld+json">
           {JSON.stringify(siteNavigationJsonLd)}
         </script>

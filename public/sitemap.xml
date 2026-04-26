@@ -1,59 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://asem5g.pages.dev/</loc>
+    <loc>https://www.asemnet.com/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/category/Antennas</loc>
+    <loc>https://www.asemnet.com/category/Antennas</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/category/Routers</loc>
+    <loc>https://www.asemnet.com/category/Routers</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/category/Packages</loc>
+    <loc>https://www.asemnet.com/category/Packages</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/category/Accessories</loc>
+    <loc>https://www.asemnet.com/category/Accessories</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/category/Services</loc>
+    <loc>https://www.asemnet.com/category/Services</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/product/ant-30</loc>
+    <loc>https://www.asemnet.com/product/ant-30</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/product/ant-27</loc>
+    <loc>https://www.asemnet.com/product/ant-27</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/product/pkg-30-hw-cpe5</loc>
+    <loc>https://www.asemnet.com/product/pkg-30-hw-cpe5</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/product/rtr-hw-cpe5</loc>
+    <loc>https://www.asemnet.com/product/pkg-27-hw-cpe5</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/about</loc>
+    <loc>https://www.asemnet.com/product/pkg-30-hw-pro6</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/product/pkg-27-hw-pro6</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/product/rtr-hw-cpe5</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/product/rtr-zyxel-nr5103</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/product/acc-lmr300</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/product/acc-lmr400</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/product/acc-zte-adapter</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/product/srv-mod</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/product/srv-inst</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/product/srv-remote-inst</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.asemnet.com/about</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/contact</loc>
+    <loc>https://www.asemnet.com/contact</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/return-policy</loc>
+    <loc>https://www.asemnet.com/return-policy</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://asem5g.pages.dev/privacy-policy</loc>
+    <loc>https://www.asemnet.com/privacy-policy</loc>
     <priority>0.5</priority>
   </url>
 </urlset>

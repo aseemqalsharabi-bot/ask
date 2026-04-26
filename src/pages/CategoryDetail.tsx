@@ -39,13 +39,13 @@ export default function CategoryDetail() {
         "@type": "ListItem",
         "position": 1,
         "name": "الرئيسية",
-        "item": "https://asem5g.pages.dev/"
+        "item": "https://www.asemnet.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": categoryName,
-        "item": `https://asem5g.pages.dev/category/${categoryId}`
+        "item": `https://www.asemnet.com/category/${categoryId}`
       }
     ]
   };
@@ -67,8 +67,8 @@ export default function CategoryDetail() {
         <meta name="description" content={description} />
         <meta property="og:title" content={categoryName} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content={`https://asem5g.pages.dev/category/${categoryId}`} />
-        <link rel="canonical" href={`https://asem5g.pages.dev/category/${categoryId}`} />
+        <meta property="og:url" content={`https://www.asemnet.com/category/${categoryId}`} />
+        <link rel="canonical" href={`https://www.asemnet.com/category/${categoryId}`} />
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbJsonLd)}
         </script>

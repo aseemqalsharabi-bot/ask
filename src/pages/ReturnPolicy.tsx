@@ -20,8 +20,8 @@ export default function ReturnPolicy() {
         <meta name="description" content="سياسة الضمان والاسترجاع في متجر عاصم لتقنية الشبكات. نضمن حقوقك في الأجهزة المعدلة ونوضح سياسة الاستبدال والاسترداد بكل شفافية." />
         <meta property="og:title" content="سياسة الضمان والاسترجاع | متجر عاصم لتقنية الشبكات" />
         <meta property="og:description" content="سياسة الضمان والاسترجاع في متجر عاصم لتقنية الشبكات. نضمن حقوقك في الأجهزة المعدلة ونوضح سياسة الاستبدال والاسترداد بكل شفافية." />
-        <meta property="og:url" content="https://asem5g.pages.dev/return-policy" />
-        <link rel="canonical" href="https://asem5g.pages.dev/return-policy" />
+        <meta property="og:url" content="https://www.asemnet.com/return-policy" />
+        <link rel="canonical" href="https://www.asemnet.com/return-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">

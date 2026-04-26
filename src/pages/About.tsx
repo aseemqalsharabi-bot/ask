@@ -20,8 +20,8 @@ export default function About() {
         <meta name="description" content="تعرف على عاصم لتقنية الشبكات، خبرة هندسية منذ 2020 في تأسيس الشبكات وحلول الواي فاي وبيع الأنتينا والراوترات المعدلة بأعلى جودة." />
         <meta property="og:title" content="من نحن | متجر عاصم لتقنية الشبكات" />
         <meta property="og:description" content="تعرف على عاصم لتقنية الشبكات، خبرة هندسية منذ 2020 في تأسيس الشبكات وحلول الواي فاي وبيع الأنتينا والراوترات المعدلة بأعلى جودة." />
-        <meta property="og:url" content="https://asem5g.pages.dev/about" />
-        <link rel="canonical" href="https://asem5g.pages.dev/about" />
+        <meta property="og:url" content="https://www.asemnet.com/about" />
+        <link rel="canonical" href="https://www.asemnet.com/about" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">

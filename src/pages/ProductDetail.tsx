@@ -41,7 +41,7 @@ export default function ProductDetail() {
     'الخدمات': 'Services'
   };
 
-  const productUrl = `https://asem5g.pages.dev/product/${product.id}`;
+  const productUrl = `https://www.asemnet.com/product/${product.id}`;
 
   const jsonLd = {
     "@context": "https://schema.org/",
@@ -77,13 +77,13 @@ export default function ProductDetail() {
         "@type": "ListItem",
         "position": 1,
         "name": "الرئيسية",
-        "item": "https://asem5g.pages.dev/"
+        "item": "https://www.asemnet.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": product.category,
-        "item": `https://asem5g.pages.dev/category/${categoryIdMap[product.category]}`
+        "item": `https://www.asemnet.com/category/${categoryIdMap[product.category]}`
       },
       {
         "@type": "ListItem",

@@ -20,7 +20,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const handleOrder = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    const productUrl = `https://asem5g.pages.dev/product/${product.id}`;
+    const productUrl = `https://www.asemnet.com/product/${product.id}`;
     const message = `مرحباً مهندس عاصم، أود الاستفسار عن ${product.name}\nالرابط: ${productUrl}\nوتأكيد توافقه مع موقعي`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank', 'noopener,noreferrer');

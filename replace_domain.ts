@@ -1,24 +1,35 @@
 import fs from 'fs';
 import path from 'path';
 
-const filesToUpdate = [
-  'src/pages/CategoryDetail.tsx',
-  'src/pages/Home.tsx',
-  'src/pages/ProductDetail.tsx',
-  'src/components/ProductCard.tsx',
-  'index.html',
-  'public/catalog.xml',
-  'public/sitemap.xml',
-  'public/robots.txt',
-  'delete-data.js'
-];
+function walkDir(dir: string, callback: (path: string) => void) {
+  fs.readdirSync(dir).forEach(f => {
+    const dirPath = path.join(dir, f);
+    const isDirectory = fs.statSync(dirPath).isDirectory();
+    if (isDirectory) {
+      walkDir(dirPath, callback);
+    } else {
+      callback(dirPath);
+    }
+  });
+}
 
-filesToUpdate.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
-  if (fs.existsSync(fullPath)) {
-    let content = fs.readFileSync(fullPath, 'utf8');
-    content = content.replace(/asem5g\.vercel\.app/g, 'asem5g.pages.dev');
-    fs.writeFileSync(fullPath, content, 'utf8');
-    console.log("Updated " + filePath);
+function replaceInFile(filePath: string) {
+  if (fs.existsSync(filePath)) {
+    let content = fs.readFileSync(filePath, 'utf8');
+    if (content.includes('asem5g.pages.dev') || content.includes('asem5g.vercel.app')) {
+      content = content.replace(/asem5g\.pages\.dev/g, 'www.asemnet.com');
+      content = content.replace(/asem5g\.vercel\.app/g, 'www.asemnet.com');
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log("Updated " + filePath);
+    }
   }
+}
+
+['src', 'public'].forEach(dir => {
+  const fullPath = path.join(process.cwd(), dir);
+  if (fs.existsSync(fullPath)) walkDir(fullPath, replaceInFile);
+});
+
+['index.html', 'delete-data.js'].forEach(file => {
+  replaceInFile(path.join(process.cwd(), file));
 });

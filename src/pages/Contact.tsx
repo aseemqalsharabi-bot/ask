@@ -10,8 +10,8 @@ export default function Contact() {
         <meta name="description" content="احصل على دعم فني متخصص وتنسيق فنيين لتركيب الأنتينا ميمو في منطقتك. تواصل مع عاصم لتقنية الشبكات لرفع سرعة إنترنتك." />
         <meta property="og:title" content="تواصل معنا | متجر عاصم لتقنية الشبكات" />
         <meta property="og:description" content="احصل على دعم فني متخصص وتنسيق فنيين لتركيب الأنتينا ميمو في منطقتك. تواصل مع عاصم لتقنية الشبكات لرفع سرعة إنترنتك." />
-        <meta property="og:url" content="https://asem5g.pages.dev/contact" />
-        <link rel="canonical" href="https://asem5g.pages.dev/contact" />
+        <meta property="og:url" content="https://www.asemnet.com/contact" />
+        <link rel="canonical" href="https://www.asemnet.com/contact" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">
