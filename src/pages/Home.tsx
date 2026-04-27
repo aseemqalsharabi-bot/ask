@@ -410,13 +410,13 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center gap-6 mb-16">
-            <a href="https://www.instagram.com/asem_mudhsh" target="_blank" aria-label="Instagram" className="group relative">
+            <a href="https://www.instagram.com/asem_net" target="_blank" aria-label="Instagram" className="group relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
               <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 backdrop-blur-xl shadow-2xl flex items-center justify-center text-white hover:scale-110 transition-all duration-500 border border-white/10">
                 <Instagram size={32} className="group-hover:text-[#ee2a7b] transition-colors" />
               </div>
             </a>
-            <a href="https://www.tiktok.com/@asemmudhsh" target="_blank" aria-label="TikTok" className="group relative">
+            <a href="https://www.tiktok.com/@asem_net" target="_blank" aria-label="TikTok" className="group relative">
               <div className="absolute -inset-4 bg-brand-accent blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
               <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 backdrop-blur-xl shadow-2xl flex items-center justify-center text-white hover:scale-110 transition-all duration-500 border border-white/10">
                 <svg className="w-8 h-8 fill-current group-hover:text-brand-accent transition-colors" viewBox="0 0 24 24">

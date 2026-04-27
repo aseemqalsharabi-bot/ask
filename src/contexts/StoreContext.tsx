@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 import { getAdminProducts, getUISettings, getIntegrationSettings, getPageContent, getNavigationSettings } from '../lib/adminService';
 import { Product, PRODUCTS } from '../constants'; // Fallback
 
-const CACHE_KEY = 'asem5g_store_cache_v3';
+const CACHE_KEY = 'asem5g_store_cache_v4';
 const CACHE_EXPIRY = 1000 * 60 * 60; // 1 Hour
 
 interface StoreContextType {
@@ -23,7 +23,7 @@ const StoreContext = createContext<StoreContextType>({
     heroSubtitle: 'حلول هندسية متكاملة لرفع كفاءة الإنترنت. متخصصون في تركيب الأنتينا وتعديل الراوترات وتغطية المساحات الواسعة.' 
   },
   integrations: {},
-  navigation: { header: [], footer: [], social: { instagram: 'https://www.instagram.com/asem_mudhsh', tiktok: 'https://www.tiktok.com/@asemmudhsh' } },
+  navigation: { header: [], footer: [], social: { instagram: 'https://www.instagram.com/asem_net', tiktok: 'https://www.tiktok.com/@asem_net' } },
   pages: { about: null, returnPolicy: null },
   loading: true,
 });
@@ -39,7 +39,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     heroSubtitle: 'حلول هندسية متكاملة لرفع كفاءة الإنترنت. متخصصون في تركيب الأنتينا وتعديل الراوترات وتغطية المساحات الواسعة.' 
   });
   const [integrations, setIntegrations] = useState<any>({});
-  const [navigation, setNavigation] = useState<any>({ header: [], footer: [], social: { instagram: 'https://www.instagram.com/asem_mudhsh', tiktok: 'https://www.tiktok.com/@asemmudhsh' } });
+  const [navigation, setNavigation] = useState<any>({ header: [], footer: [], social: { instagram: 'https://www.instagram.com/asem_net', tiktok: 'https://www.tiktok.com/@asem_net' } });
   const [pages, setPages] = useState<any>({});
   const [loading, setLoading] = useState(true);
 

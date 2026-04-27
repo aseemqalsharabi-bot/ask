@@ -101,8 +101,8 @@ export const getNavigationSettings = async () => {
     header: [],
     footer: [],
     social: {
-      instagram: 'https://www.instagram.com/asem_mudhsh',
-      tiktok: 'https://www.tiktok.com/@asemmudhsh'
+      instagram: 'https://www.instagram.com/asem_net',
+      tiktok: 'https://www.tiktok.com/@asem_net'
     }
   };
 
@@ -112,9 +112,26 @@ export const getNavigationSettings = async () => {
   }
   
   const data = snap.data();
-  // Auto-heal missing social links explicitly
+  // Auto-heal missing social links explicitly or migrate old ones
+  let needsUpdate = false;
+  let healedSocial = { ...data.social };
+  
   if (!data.social || Object.keys(data.social).length === 0) {
-    const healedData = { ...data, social: defaultNav.social };
+    healedSocial = defaultNav.social;
+    needsUpdate = true;
+  } else {
+    if (healedSocial.instagram === 'https://www.instagram.com/asem_mudhsh') {
+      healedSocial.instagram = 'https://www.instagram.com/asem_net';
+      needsUpdate = true;
+    }
+    if (healedSocial.tiktok === 'https://www.tiktok.com/@asemmudhsh') {
+      healedSocial.tiktok = 'https://www.tiktok.com/@asem_net';
+      needsUpdate = true;
+    }
+  }
+
+  if (needsUpdate) {
+    const healedData = { ...data, social: healedSocial };
     try { await setDoc(ref, healedData, { merge: true }); } catch(e) {}
     return healedData;
   }
