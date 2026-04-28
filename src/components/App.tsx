@@ -38,11 +38,20 @@ function ScrollToTop() {
   return null;
 }
 
+import { Helmet } from 'react-helmet-async';
+
 function MainApp() {
   const { uiSettings } = useStore();
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-brand-accent selection:text-brand-primary transition-colors duration-500">
+      <Helmet>
+        <title>متجر عاصم لتقنية الشبكات</title>
+        <meta name="description" content="متخصصون في حلول مشاكل الشبكة وضعف الانترنت تركيب انتينا ميمو وتعديل راوترات 5G تاسيس وتركيب الشبكات باحدث التقنيات احصل على شبكة امنه ومستقرة." />
+        <meta property="og:title" content="متجر عاصم لتقنية الشبكات" />
+        <meta property="og:description" content="متخصصون في حلول مشاكل الشبكة وضعف الانترنت تركيب انتينا ميمو وتعديل راوترات 5G تاسيس وتركيب الشبكات باحدث التقنيات." />
+        <meta name="keywords" content="متجر عاصم لتقنية الشبكات, تعديل راوتر 5G Pro 5, انتينا ميمو 30 ديبي, فك حجب ترددات STC 5G, تسريع انترنت الألعاب, حل مشكلة تقطيع 5G زين, انتينا ميمو 24 ديبي, تعديل مودم 5G, تثبيت ترددات 5G موبايلي, حل ضعف النت, ضعف الشبكه" />
+      </Helmet>
       <Header />
       <div className="flex-grow flex flex-col">
         <Suspense fallback={
