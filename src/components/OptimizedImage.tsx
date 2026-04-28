@@ -13,17 +13,25 @@ interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> 
 export default function OptimizedImage({ 
   src, 
   alt, 
-  widthParam, 
-  quality,
+  widthParam = 800, 
+  quality = 80,
   highPriority = false,
   className = '',
   itemProp,
   ...props 
 }: OptimizedImageProps) {
 
+  // Global image optimizer (wsrv.nl automatically converts to WebP and scales and compresses it)
+  // This drastically increases site speed directly from edge CDN.
+  let finalSrc = src;
+  if (src && src.startsWith('http') && !src.includes('wsrv.nl') && !src.endsWith('.svg')) {
+     const urlWithoutProtocol = src.replace(/^https?:\/\//, '');
+     finalSrc = `https://wsrv.nl/?url=${encodeURIComponent(urlWithoutProtocol)}&output=webp&q=${quality}&w=${widthParam}&we`;
+  }
+
   return (
     <img
-      src={src}
+      src={finalSrc}
       alt={alt}
       loading={highPriority ? "eager" : "lazy"}
       decoding={highPriority ? "sync" : "async"}
