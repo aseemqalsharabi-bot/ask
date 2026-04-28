@@ -8,7 +8,7 @@ export default function Reviews() {
   }, []);
 
   return (
-    <main className="flex-grow pt-[100px] md:pt-[130px]">
+    <main className="flex-grow pt-[100px] md:pt-[130px] pb-24 bg-brand-neutral">
       <Helmet>
         <title>تقييمات العملاء | متجر عاصم لتقنية الشبكات</title>
         <meta name="description" content="اقرأ تقييمات وتجارب عملاء متجر عاصم لتقنية الشبكات حول حلول ضعف الإنترنت، تركيب أنتينا ميمو 5G، وتعديل الراوترات بجميع أنواعها." />
