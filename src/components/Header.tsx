@@ -137,7 +137,6 @@ export default function Header() {
                   { name: 'الخدمات', href: '/category/Services' },
                   { name: 'من نحن', href: '/about' },
                   { name: 'سياسة الضمان', href: '/return-policy' },
-                  { name: 'المدونة', href: '/blog' },
                   { name: 'تواصل معنا', href: '/contact' },
                   { name: 'آراء العملاء', href: '/reviews' },
                   { name: 'الأسئلة الشائعة', href: '/#FAQ' }
