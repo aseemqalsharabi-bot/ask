@@ -100,6 +100,7 @@ export default function Footer() {
                 { name: 'من نحن', href: '/about' },
                 { name: 'سياسة الضمان', href: '/return-policy' },
                 { name: 'سياسة الخصوصية', href: '/privacy-policy' },
+                { name: 'المدونة التقنية', href: '/blog' },
                 { name: 'تواصل معنا', href: '/contact' },
                 { name: 'آراء العملاء', href: '/reviews' },
                 { name: 'الأسئلة الشائعة', href: '/#FAQ' }

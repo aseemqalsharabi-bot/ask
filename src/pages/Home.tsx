@@ -112,10 +112,11 @@ export default function Home() {
   return (
     <main className="flex-grow pt-[100px] md:pt-[130px]">
       <Helmet>
-        <title>متجر عاصم لتقنية الشبكات</title>
-        <meta name="description" content="متخصصون في حلول مشاكل الشبكة وضعف الانترنت تركيب انتينا ميمو وتعديل راوترات 5G تاسيس وتركيب الشبكات باحدث التقنيات احصل على شبكة امنه ومستقرة" />
-        <meta property="og:title" content="متجر عاصم لتقنية الشبكات" />
-        <meta property="og:description" content="متخصصون في حلول مشاكل الشبكة وضعف الانترنت تركيب انتينا ميمو وتعديل راوترات 5G تاسيس وتركيب الشبكات باحدث التقنيات احصل على شبكة امنه ومستقرة" />
+        <title>متجر عاصم لتقنية الشبكات | مقوي شبكة وانتينا ميمو</title>
+        <meta name="description" content="متجر عاصم لتقنية الشبكات: المتجر الأول في السعودية لحلول ضعف النت وتقوية شبكة الجوال. نقدم أفضل خيارات انتينا ميمو 5G، راوترات معدلة، الأنتينا الذهبي لتثبيت البنق." />
+        <meta name="keywords" content="انتينا ميمو, مقوي شبكة, حل ضعف النت, انتينا 5G, تعديل راوتر, تقوية شبكة الجوال, انتينا ميمو 5G للسعودية" />
+        <meta property="og:title" content="متجر عاصم لتقنية الشبكات | مقوي شبكة وانتينا ميمو" />
+        <meta property="og:description" content="متجر عاصم لتقنية الشبكات: المتجر الأول في السعودية لحلول ضعف النت وتقوية شبكة الجوال. نقدم أفضل خيارات انتينا ميمو 5G، راوترات معدلة، الأنتينا الذهبي لتثبيت البنق." />
         <meta property="og:image" content="https://i.postimg.cc/q7FNJj0K/IMG-20260205-WA0041(1).png" />
         <meta property="og:url" content="https://www.asemnet.com" />
         <link rel="canonical" href="https://www.asemnet.com" />
