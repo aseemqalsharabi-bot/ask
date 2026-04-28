@@ -348,9 +348,9 @@ export default function Home() {
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-brand-accent font-bold text-xs tracking-[0.4em] uppercase mb-4 block">لماذا تختارنا؟</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight tracking-tighter">حل نهائي لمشكلة البنج (Ping) واللاغ في الألعاب.. <br /> <span className="text-brand-accent">كأنك تحت البرج مباشرة</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight tracking-tighter">حل نهائي لمشكلة البنج (Ping) وتقطيع الاتصال في الألعاب.. <br /> <span className="text-brand-accent">كأنك تحت البرج مباشرة</span></h2>
             <p className="text-white/80 text-lg mb-10 font-medium leading-relaxed">
-              استمتع بتحميل فوري، ألعاب بدون لاق، وبث بدقة 4K بدون توقف. انضم لأكثر من 1000 عميل سعودي نقلوا تجربتهم لمستوى آخر.
+              استمتع بتحميل فوري، ألعاب بدون تقطيع، وبث بدقة 4K بدون توقف. انضم لأكثر من 1000 عميل سعودي نقلوا تجربتهم لمستوى آخر.
             </p>
             <div className="space-y-8">
               <div className="flex gap-5">

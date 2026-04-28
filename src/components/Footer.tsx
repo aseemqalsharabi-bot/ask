@@ -95,6 +95,8 @@ export default function Footer() {
             <ul className="space-y-3 w-full flex flex-col items-center md:items-start">
               {[
                 { name: 'الرئيسية', href: '/' },
+                { name: 'جميع المنتجات', href: '/all-products' },
+                { name: 'الأكثر مبيعاً', href: '/best-sellers' },
                 { name: 'من نحن', href: '/about' },
                 { name: 'سياسة الضمان', href: '/return-policy' },
                 { name: 'سياسة الخصوصية', href: '/privacy-policy' },

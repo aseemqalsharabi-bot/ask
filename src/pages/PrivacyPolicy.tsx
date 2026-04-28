@@ -7,6 +7,7 @@ export default function PrivacyPolicy() {
       <Helmet>
         <title>سياسة الخصوصية | متجر عاصم لتقنية الشبكات</title>
         <meta name="description" content="سياسة الخصوصية لمتجر عاصم لتقنية الشبكات. نحن نلتزم بحماية بياناتك وخصوصيتك عند استخدام خدماتنا." />
+        <link rel="canonical" href="https://www.asemnet.com/privacy-policy" />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-4xl">

@@ -1,18 +1,20 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { ScrollRestoration } from 'react-router-dom';
 import { StoreProvider, useStore } from '../contexts/StoreContext';
 import Header from './Header';
 import Footer from './Footer';
-
-import Home from '../pages/Home';
-import ProductDetail from '../pages/ProductDetail';
-import CategoryDetail from '../pages/CategoryDetail';
-import About from '../pages/About';
-import ReturnPolicy from '../pages/ReturnPolicy';
-import Contact from '../pages/Contact';
-import PrivacyPolicy from '../pages/PrivacyPolicy';
 import Chat from './Chat';
+
+const Home = lazy(() => import('../pages/Home'));
+const ProductDetail = lazy(() => import('../pages/ProductDetail'));
+const CategoryDetail = lazy(() => import('../pages/CategoryDetail'));
+const AllProducts = lazy(() => import('../pages/AllProducts'));
+const BestSellers = lazy(() => import('../pages/BestSellers'));
+const About = lazy(() => import('../pages/About'));
+const ReturnPolicy = lazy(() => import('../pages/ReturnPolicy'));
+const Contact = lazy(() => import('../pages/Contact'));
+const PrivacyPolicy = lazy(() => import('../pages/PrivacyPolicy'));
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -42,16 +44,24 @@ function MainApp() {
     <div className="min-h-screen flex flex-col selection:bg-brand-accent selection:text-brand-primary transition-colors duration-500">
       <Header />
       <div className="flex-grow flex flex-col">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/category/:categoryId" element={<CategoryDetail />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/return-policy" element={<ReturnPolicy />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/chat" element={<Chat />} />
-        </Routes>
+        <Suspense fallback={
+          <div className="flex-grow flex items-center justify-center min-h-[50vh]">
+            <div className="w-12 h-12 border-4 border-brand-accent/20 border-t-brand-accent rounded-full animate-spin"></div>
+          </div>
+        }>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/all-products" element={<AllProducts />} />
+            <Route path="/best-sellers" element={<BestSellers />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/category/:categoryId" element={<CategoryDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/return-policy" element={<ReturnPolicy />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/chat" element={<Chat />} />
+          </Routes>
+        </Suspense>
       </div>
       <Footer />
       

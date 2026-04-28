@@ -128,6 +128,8 @@ export default function Header() {
               <nav className="flex flex-col gap-2">
                 {[
                   { name: 'الرئيسية', href: '/' },
+                  { name: 'جميع المنتجات', href: '/all-products' },
+                  { name: 'الأكثر مبيعاً', href: '/best-sellers' },
                   { name: 'الانتينات', href: '/category/Antennas' },
                   { name: 'البكجات', href: '/category/Packages' },
                   { name: 'الراوترات 5G', href: '/category/Routers' },
