@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -21,17 +21,21 @@ export default function OptimizedImage({
   ...props 
 }: OptimizedImageProps) {
 
-  // Global image optimizer (wsrv.nl automatically converts to WebP and scales and compresses it)
-  // This drastically increases site speed directly from edge CDN.
-  let finalSrc = src;
-  if (src && src.startsWith('http') && !src.includes('wsrv.nl') && !src.endsWith('.svg')) {
-     const urlWithoutProtocol = src.replace(/^https?:\/\//, '');
-     finalSrc = `https://wsrv.nl/?url=${encodeURIComponent(urlWithoutProtocol)}&output=webp&q=${quality}&w=${widthParam}&we`;
-  }
+  const [currentSrc, setCurrentSrc] = useState(src);
+
+  useEffect(() => {
+    let finalSrc = src;
+    if (src && src.startsWith('http') && !src.includes('wsrv.nl') && !src.endsWith('.svg')) {
+       // Using wsrv.nl to automatically convert to WebP and compress
+       const urlWithoutProtocol = src.replace(/^https?:\/\//, '');
+       finalSrc = `https://wsrv.nl/?url=${encodeURIComponent(urlWithoutProtocol)}&output=webp&q=${quality}&w=${widthParam}&we`;
+    }
+    setCurrentSrc(finalSrc);
+  }, [src, quality, widthParam]);
 
   return (
     <img
-      src={finalSrc}
+      src={currentSrc}
       alt={alt}
       loading={highPriority ? "eager" : "lazy"}
       decoding={highPriority ? "sync" : "async"}
@@ -39,6 +43,12 @@ export default function OptimizedImage({
       fetchPriority={highPriority ? "high" : "auto"}
       className={className}
       itemProp={itemProp}
+      onError={() => {
+        // Ultimate fallback: if the optimized URL fails, switch back to the raw URL
+        if (currentSrc !== src) {
+          setCurrentSrc(src);
+        }
+      }}
       {...props}
     />
   );
