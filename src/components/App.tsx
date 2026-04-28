@@ -15,6 +15,7 @@ const About = lazy(() => import('../pages/About'));
 const ReturnPolicy = lazy(() => import('../pages/ReturnPolicy'));
 const Contact = lazy(() => import('../pages/Contact'));
 const PrivacyPolicy = lazy(() => import('../pages/PrivacyPolicy'));
+const Reviews = lazy(() => import('../pages/Reviews'));
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -59,6 +60,7 @@ function MainApp() {
             <Route path="/return-policy" element={<ReturnPolicy />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/reviews" element={<Reviews />} />
             <Route path="/chat" element={<Chat />} />
           </Routes>
         </Suspense>

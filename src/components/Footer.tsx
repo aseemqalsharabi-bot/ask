@@ -101,7 +101,7 @@ export default function Footer() {
                 { name: 'سياسة الضمان', href: '/return-policy' },
                 { name: 'سياسة الخصوصية', href: '/privacy-policy' },
                 { name: 'تواصل معنا', href: '/contact' },
-                { name: 'آراء العملاء', href: '/#reviews' },
+                { name: 'آراء العملاء', href: '/reviews' },
                 { name: 'الأسئلة الشائعة', href: '/#FAQ' }
               ].map((link, i) => (
                 <li key={i}>
