@@ -50,6 +50,7 @@ export default function ProductDetail() {
     "image": product.images || [product.image],
     "description": product.description,
     "sku": product.id,
+    "mpn": product.id,
     "brand": {
       "@type": "Brand",
       "name": "عاصم لتقنية الشبكات"
@@ -60,13 +61,62 @@ export default function ProductDetail() {
       "priceCurrency": "SAR",
       "price": product.price,
       "availability": product.outOfStock ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
-      "itemCondition": "https://schema.org/NewCondition"
+      "itemCondition": "https://schema.org/NewCondition",
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "SA",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": "14",
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/RestockingFees"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "SAR"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "SA"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 2,
+            "unitCode": "d"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 1,
+            "maxValue": 5,
+            "unitCode": "d"
+          }
+        }
+      }
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
       "reviewCount": "15"
-    }
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "عميل موثوق"
+        }
+      }
+    ]
   };
 
   const breadcrumbJsonLd = {

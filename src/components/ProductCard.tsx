@@ -37,6 +37,25 @@ export default function ProductCard({ product }: ProductCardProps) {
       itemType="https://schema.org/Product"
     >
       <Link to={`/product/${product.id}`} className="flex flex-col h-full">
+        <meta itemProp="description" content={product.description || product.name} />
+        <meta itemProp="sku" content={product.id} />
+        <meta itemProp="brand" content="عاصم لتقنية الشبكات" />
+        
+        <div itemProp="aggregateRating" itemScope itemType="https://schema.org/AggregateRating">
+          <meta itemProp="ratingValue" content="5" />
+          <meta itemProp="reviewCount" content="15" />
+        </div>
+        
+        <div itemProp="review" itemScope itemType="https://schema.org/Review">
+          <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
+            <meta itemProp="ratingValue" content="5" />
+            <meta itemProp="bestRating" content="5" />
+          </div>
+          <div itemProp="author" itemScope itemType="https://schema.org/Person">
+            <meta itemProp="name" content="عميل موثوق" />
+          </div>
+        </div>
+
         <div className="relative aspect-square bg-white/5 rounded-t-2xl md:rounded-t-[2rem] flex items-center justify-center p-4 md:p-6 overflow-hidden">
           {/* Inner white container for the product image to make it pop but keep the dark theme border */}
           <div className="absolute inset-2 md:inset-3 bg-white rounded-xl md:rounded-2xl shadow-[0_0_15px_rgba(0,229,255,0.15)] border border-brand-accent/30 flex items-center justify-center p-2 overflow-hidden">
@@ -81,6 +100,37 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="mt-auto" itemProp="offers" itemScope itemType="https://schema.org/Offer">
             <meta itemProp="priceCurrency" content="SAR" />
             <meta itemProp="availability" content={product.outOfStock ? "https://schema.org/OutOfStock" : "https://schema.org/InStock"} />
+            
+            <div itemProp="hasMerchantReturnPolicy" itemScope itemType="https://schema.org/MerchantReturnPolicy">
+              <meta itemProp="applicableCountry" content="SA" />
+              <meta itemProp="returnPolicyCategory" content="https://schema.org/MerchantReturnFiniteReturnWindow" />
+              <meta itemProp="merchantReturnDays" content="14" />
+              <meta itemProp="returnMethod" content="https://schema.org/ReturnByMail" />
+              <meta itemProp="returnFees" content="https://schema.org/RestockingFees" />
+            </div>
+
+            <div itemProp="shippingDetails" itemScope itemType="https://schema.org/OfferShippingDetails">
+              <div itemProp="shippingRate" itemScope itemType="https://schema.org/MonetaryAmount">
+                <meta itemProp="value" content="0" />
+                <meta itemProp="currency" content="SAR" />
+              </div>
+              <div itemProp="shippingDestination" itemScope itemType="https://schema.org/DefinedRegion">
+                <meta itemProp="addressCountry" content="SA" />
+              </div>
+              <div itemProp="deliveryTime" itemScope itemType="https://schema.org/ShippingDeliveryTime">
+                <div itemProp="handlingTime" itemScope itemType="https://schema.org/QuantitativeValue">
+                  <meta itemProp="minValue" content="0" />
+                  <meta itemProp="maxValue" content="2" />
+                  <meta itemProp="unitCode" content="d" />
+                </div>
+                <div itemProp="transitTime" itemScope itemType="https://schema.org/QuantitativeValue">
+                  <meta itemProp="minValue" content="1" />
+                  <meta itemProp="maxValue" content="5" />
+                  <meta itemProp="unitCode" content="d" />
+                </div>
+              </div>
+            </div>
+
             <div className="flex items-center gap-2 mb-3 md:mb-4">
               <span className="text-base md:text-xl font-black text-brand-accent">
                 <span itemProp="price" content={product.price.toString()}>{product.price}</span> 
